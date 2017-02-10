@@ -1,0 +1,39 @@
+$textColor: #222;
+$fullHeight: 100%;
+$fonts: -apple-system, BlinkMacSystemFont,
+    "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell",
+    "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+
+html, body {
+    height: $fullHeight;
+}
+
+main {
+    display: flex;
+    overflow: visible;
+    align-items: center;
+    height: $fullHeight;
+    margin: 5px;
+}
+
+main > aside,
+main > textarea {
+    flex: 1;
+}
+
+.input-output {
+    min-height: $fullHeight;
+    margin: 5px;
+    padding: 0.5em;
+    text-align: left;
+    font-size: 1em;
+    font-family: $fonts;
+    color: $textColor;
+}
+
+.divider {
+    min-height: $fullHeight;
+    max-width: 0.01%;
+    border: 0.5px solid black;
+}
