@@ -31,7 +31,7 @@ gulp.task('webserver', function() {
     gulp.src('builds/markdownPreviewer/')
         .pipe(webserver({
             livereload: true,
-            open: true
+            // open: true
         }));
 });
 
