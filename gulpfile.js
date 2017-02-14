@@ -2,12 +2,19 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     sass = require('gulp-ruby-sass'),
     sourcemaps = require('gulp-sourcemaps'),
-    webserver = require('gulp-webserver');
+    webserver = require('gulp-webserver'),
+    babel = require("gulp-babel"),
+    concat = require("gulp-concat");
 
 gulp.task('js', function() {
-  return gulp.src('builds/markdownPreviewer/_js/scripts.js')
-    .pipe(jshint('./.jshintrc'))
-    .pipe(jshint.reporter('jshint-stylish'));
+  return gulp.src('builds/markdownPreviewer/_js/scripts.jsx')
+    // .pipe(jshint())
+    // .pipe(jshint.reporter('jshint-stylish'))
+    .pipe(sourcemaps.init())
+    .pipe(babel())
+    .pipe(concat("all.js"))
+    .pipe(sourcemaps.write("."))
+    .pipe(gulp.dest("builds/markdownPreviewer/_js/"));
 });
 
 gulp.task('sass', function () {
@@ -35,4 +42,4 @@ gulp.task('webserver', function() {
         }));
 });
 
-gulp.task('default', ['watch', 'sass', 'webserver']);
+gulp.task('default', ['watch', 'sass', 'js', 'webserver']);

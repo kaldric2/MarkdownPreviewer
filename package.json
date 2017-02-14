@@ -1,17 +1,38 @@
 {
-  "name": "sassEssentials",
+  "name": "sass_essentials",
   "version": "0.0.1",
   "description": "A website for my Sass Essential Training course on Lynda.com",
   "repository": {
     "type": "git",
-    "url": "https://github.com/planetoftheweb/sassEssentials.git"
+    "url": "git+https://github.com/planetoftheweb/sassEssentials.git"
   },
   "author": "Ray Villalobos",
   "devDependencies": {
-    "gulp": "^3.8.11",
-    "gulp-jshint": "^1.9.0",
+    "babel-cli": "^6.22.2",
+    "babel-preset-env": "^1.1.8",
+    "babel-preset-es2015": "^6.22.0",
+    "babel-preset-react": "^6.22.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-jshint": "^1.12.0",
     "gulp-ruby-sass": "^1.0.5",
     "gulp-sourcemaps": "^1.5.2",
-    "gulp-webserver": "^0.9.1"
-  }
+    "gulp-webserver": "^0.9.1",
+    "jshint": "^2.9.4",
+    "jshint-stylish": "^2.2.1",
+    "react": "^15.4.2",
+    "react-dom": "^15.4.2"
+  },
+  "bugs": {
+    "url": "https://github.com/planetoftheweb/sassEssentials/issues"
+  },
+  "homepage": "https://github.com/planetoftheweb/sassEssentials#readme",
+  "main": "gulpfile.js",
+  "dependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "babel src -d lib"
+  },
+  "license": "ISC"
 }

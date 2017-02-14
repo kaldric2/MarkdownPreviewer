@@ -1,5 +1,8 @@
 html, body {
     height: $fullHeight;
+    div {
+        height: $fullHeight;
+    }
 }
 
 main {
@@ -10,9 +13,14 @@ main {
     margin: 5px;
 }
 
-main > aside,
-main > textarea {
-    flex: 1;
+main {
+    aside {
+        flex: 1;
+    }
+    textarea {
+        flex: 1;
+        resize: none;
+    }
 }
 
 .input-output {
